@@ -9,38 +9,8 @@ import { CiMail } from "react-icons/ci";
 const Footer = () => {
   return (
     <div className="dark bg-gray-900 text-white py-8">
-      <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between">
-        <div className="text-white grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-          <a target="_blank" href="https://facebook.com/nnhatsang">
-            <Image
-              src={FacebookIcon}
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={24}
-              height={24}
-              priority
-            />
-          </a>
-          <a target="_blank" href="https://github.com/nnhatsang">
-            <Image
-              src={GithubIcon}
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={24}
-              height={24}
-              priority
-            />
-          </a>
-          <a target="_blank" href="https://linkedin.com/in/nnhatsang">
-            <Image
-              src={LinkedinIcon}
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={24}
-              height={24}
-              priority
-            />
-          </a>
+      <div className="container mx-auto flex flex-col md:flex-row md:items-center justify-between">
+        <div className="text-white grid grid-cols-1 sm:grid-cols-3 gap-4">
           <a
             className="flex gap-2 items-center"
             target="_blank"
@@ -56,6 +26,51 @@ const Footer = () => {
           >
             <LucidePhone className="h-6 w-6" />
             0356740278
+          </a>
+          <a
+            className="flex gap-2 items-center"
+            target="_blank"
+            href="https://facebook.com/nnhatsang"
+          >
+            <Image
+              src={FacebookIcon}
+              alt="Vercel Logo"
+              className="dark:invert"
+              width={24}
+              height={24}
+              priority
+            />
+            facebook.com/nnhatsang
+          </a>
+          <a
+            className="flex gap-2 items-center"
+            target="_blank"
+            href="https://github.com/nnhatsang"
+          >
+            <Image
+              src={GithubIcon}
+              alt="Vercel Logo"
+              className="dark:invert"
+              width={24}
+              height={24}
+              priority
+            />
+            github.com/nnhatsang
+          </a>
+          <a
+            className="flex gap-2 items-center"
+            target="_blank"
+            href="https://linkedin.com/in/nnhatsang"
+          >
+            <Image
+              src={LinkedinIcon}
+              alt="Vercel Logo"
+              className="dark:invert"
+              width={24}
+              height={24}
+              priority
+            />
+            linkedin.com/in/nnhatsang
           </a>
         </div>
         <p className="mt-4 md:mt-0 text-sm text-gray-300">
