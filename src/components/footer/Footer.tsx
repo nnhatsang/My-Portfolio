@@ -1,83 +1,81 @@
 "use client";
-import FacebookIcon from "@/assets/svg/facebook.svg";
-import GithubIcon from "@/assets/svg/github.svg";
-import LinkedinIcon from "@/assets/svg/linkedin.svg";
-import { LucidePhone } from "lucide-react";
+import { MENULINKS, SOCIAL_LINKS } from "@/utils/constants";
 import Image from "next/image";
-import { CiMail } from "react-icons/ci";
 
 const Footer = () => {
-  return (
-    <div className="dark bg-gray-900 text-white py-8">
-      <div className="container mx-auto flex flex-col md:flex-row md:items-center justify-between">
-        <div className="text-white grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <a
-            className="flex gap-2 items-center"
-            target="_blank"
-            href="mailto:nhatsang57@gmail.com"
-          >
-            <CiMail className="h-6 w-6" />
-            nhatsang57@gmail.com
-          </a>
-          <a
-            className="flex gap-2 items-center"
-            target="_blank"
-            href="tel:0356740278"
-          >
-            <LucidePhone className="h-6 w-6" />
-            0356740278
-          </a>
-          <a
-            className="flex gap-2 items-center"
-            target="_blank"
-            href="https://facebook.com/nnhatsang"
-          >
-            <Image
-              src={FacebookIcon}
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={24}
-              height={24}
-              priority
-            />
-            facebook.com/nnhatsang
-          </a>
-          <a
-            className="flex gap-2 items-center"
-            target="_blank"
-            href="https://github.com/nnhatsang"
-          >
-            <Image
-              src={GithubIcon}
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={24}
-              height={24}
-              priority
-            />
-            github.com/nnhatsang
-          </a>
-          <a
-            className="flex gap-2 items-center"
-            target="_blank"
-            href="https://linkedin.com/in/nnhatsang"
-          >
-            <Image
-              src={LinkedinIcon}
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={24}
-              height={24}
-              priority
-            />
-            linkedin.com/in/nnhatsang
-          </a>
-        </div>
-        <p className="mt-4 md:mt-0 text-sm text-gray-300">
-          &copy; Design by Nnhatsang.
-        </p>
+  const { ref: footerRef } = MENULINKS[4];
+  const renderSocialIcons = (): React.ReactNode => {
+    return (Object.keys(SOCIAL_LINKS) as Array<keyof typeof SOCIAL_LINKS>).map(
+      (el) => (
+        <a
+          href={SOCIAL_LINKS[el]}
+          key={el}
+          className="link hover:opacity-80 duration-300 md:px-2 px-1"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <Image src={`/social/${el}.svg`} alt={el} width={40} height={40} />
+        </a>
+      ),
+    );
+  };
+
+  const renderFooterContent = (): React.ReactNode => (
+    <>
+      <h1 className="font-medium text-3xl md:text-4xl text-center">
+        Contact with me on social media.
+      </h1>
+      <div className="flex mt-8 gap-6">{renderSocialIcons()}</div>
+      <div className="flex mt-8">
+        {/* <Button
+          className="mr-3"
+          type={ButtonTypes.OUTLINE}
+          name="Resume"
+          otherProps={{
+            target: "_blank",
+            rel: "noreferrer",
+          }}
+          href="/Ayush_Resume.pdf"
+        ></Button>
+        <Button
+          className="ml-3"
+          type={ButtonTypes.WHITE}
+          name="Let's Talk"
+          href={SOCIAL_LINKS.topmate}
+          otherProps={{
+            target: "_blank",
+            rel: "noreferrer",
+          }}
+        ></Button> */}
       </div>
-    </div>
+      <h2 className="text-center text-sm sm:text-base">
+        Designed by Nnhatsang
+      </h2>
+    </>
+  );
+
+  return (
+    <footer
+      className="w-full z-0 relative select-none bg-cover flex flex-col items-stretch"
+      id={footerRef}
+    >
+      <div className="np-footer-graphic-container">
+        <img
+          className="np-footer-graphic"
+          src="https://www.northpass.com/hubfs/_Northpass_Website/np-footer-illustration-howie.svg?noresize"
+          alt="Northpass Mountain Illustration"
+          loading="lazy"
+          width={3838}
+          height={450}
+        />
+      </div>
+
+      <div className="h-full w-full bg-[#00283C]">
+        <div className="section-container flex-col flex h-full justify-end z-10 items-center pt-5 pb-12">
+          {renderFooterContent()}
+        </div>
+      </div>
+    </footer>
   );
 };
 

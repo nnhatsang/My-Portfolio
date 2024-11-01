@@ -17,10 +17,10 @@ const ThemeToggle = () => {
 
   return (
     <TooltipProvider disableHoverableContent>
-      <Tooltip delayDuration={100}>
+      <Tooltip delayDuration={200}>
         <TooltipTrigger asChild>
           <Button
-            className="rounded-full w-8 h-8 bg-background mr-2"
+            className="rounded-full w-9 h-9 bg-background mr-2"
             variant="outline"
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -30,7 +30,7 @@ const ThemeToggle = () => {
             <span className="sr-only ">Switch Theme</span>
           </Button>
         </TooltipTrigger>
-        <TooltipContent className="z-[1000]" side="bottom">
+        <TooltipContent className="z-[1000] mt-2" side="bottom">
           Switch Theme
         </TooltipContent>
       </Tooltip>
