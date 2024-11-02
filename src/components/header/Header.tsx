@@ -12,7 +12,7 @@ const Header: React.FC = () => {
   const Menu = (): React.ReactNode => {
     return (
       <section
-        className="menu fixed top-0 left-0 w-full h-screen overflow-hidden invisible pointer-events-none flex items-center justify-center"
+        className="menu fixed top-0 left-0 w-full h-screen z-50 overflow-hidden invisible pointer-events-none flex items-center justify-center"
         style={{ visibility: "hidden" }}
       >
         <div className="flex-none overflow-hidden flex items-center justify-center">
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
             </div>
             <nav className={`outer-menu ${menuVisible ? "menu-visible" : ""}`}>
               <button
-                className="hamburger w-6 h-6 flex items-center justify-center link relative"
+                className="hamburger w-6 h-6 flex items-center justify-center link relative z-10"
                 onClick={() => setmenuVisible(!menuVisible)}
               >
                 <div className="relative flex-none w-full bg-white duration-300 flex items-center justify-center"></div>
