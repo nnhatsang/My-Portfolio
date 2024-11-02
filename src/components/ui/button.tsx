@@ -61,7 +61,7 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   href?: string;
-  name: string;
+  name?: string;
   otherProps?: Record<string, string>;
 }
 
@@ -89,7 +89,6 @@ const Button = React.forwardRef<
     const Comp = asChild ? Slot : href ? "a" : "button";
 
     if (href) {
-      // Nếu có href, sử dụng thẻ <a>
       return (
         <a
           {...(otherProps || {})}
