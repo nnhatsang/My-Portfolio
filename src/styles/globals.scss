@@ -139,10 +139,10 @@
   }
 }
 
-
 .np-footer-graphic-container {
   height: 225px;
   position: relative;
+  
 }
 .np-footer-graphic {
   bottom: -1px;
@@ -152,6 +152,12 @@
   position: absolute;
   transform: translateX(-50%);
   width: auto;
+}
+@media (max-width: 768px) {
+  .np-footer-graphic,
+  .np-footer-graphic-container {
+    height: 38.462vw;
+  }
 }
 @media (min-width: 768px) and (max-width: 1170px) {
   .np-footer-graphic,
@@ -263,7 +269,7 @@
               #ffffff 0%,
               #ffffff 50%,
               #6dd5ed 51%,
-              #00283C 100%
+              #00283c 100%
             );
             background-size: 200% 100%;
             -webkit-background-clip: text;
@@ -279,4 +285,3 @@
     }
   }
 }
-

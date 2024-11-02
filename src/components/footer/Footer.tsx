@@ -1,6 +1,7 @@
 "use client";
 import { MENULINKS, SOCIAL_LINKS } from "@/utils/constants";
 import Image from "next/image";
+import { Button } from "../ui/button";
 
 const Footer = () => {
   const { ref: footerRef } = MENULINKS[4];
@@ -22,33 +23,19 @@ const Footer = () => {
 
   const renderFooterContent = (): React.ReactNode => (
     <>
-      <h1 className="font-medium text-3xl md:text-4xl text-center">
+      <h1 className="font-medium text-3xl md:text-4xl text-center text-white">
         Contact with me on social media.
       </h1>
       <div className="flex mt-8 gap-6">{renderSocialIcons()}</div>
-      <div className="flex mt-8">
-        {/* <Button
-          className="mr-3"
-          type={ButtonTypes.OUTLINE}
-          name="Resume"
-          otherProps={{
-            target: "_blank",
-            rel: "noreferrer",
-          }}
-          href="/Ayush_Resume.pdf"
-        ></Button>
+      <div className="flex my-6">
         <Button
-          className="ml-3"
-          type={ButtonTypes.WHITE}
-          name="Let's Talk"
-          href={SOCIAL_LINKS.topmate}
-          otherProps={{
-            target: "_blank",
-            rel: "noreferrer",
-          }}
-        ></Button> */}
+          variant="gooeyRight"
+          name="Resume"
+          href="/CV_NguyenNhatSang.pdf"
+          otherProps={{ target: "_blank", rel: "noreferrer" }}
+        ></Button>
       </div>
-      <h2 className="text-center text-sm sm:text-base">
+      <h2 className="text-center text-white text-sm sm:text-base">
         Designed by Nnhatsang
       </h2>
     </>

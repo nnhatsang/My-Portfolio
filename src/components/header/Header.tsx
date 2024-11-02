@@ -30,7 +30,7 @@ const Header: React.FC = () => {
                   <a
                     className="link relative inline font-bold text-5xl duration-300 hover:no-underline"
                     href={`#${el.ref}`}
-                    onClick={setmenuVisible.bind(null, false)}
+                    onClick={() => setmenuVisible(false)}
                   >
                     {el.name}
                   </a>
@@ -56,7 +56,7 @@ const Header: React.FC = () => {
             <nav className={`outer-menu ${menuVisible ? "menu-visible" : ""}`}>
               <button
                 className="hamburger w-6 h-6 flex items-center justify-center link relative"
-                onClick={setmenuVisible.bind(null, !menuVisible)}
+                onClick={() => setmenuVisible(!menuVisible)}
               >
                 <div className="relative flex-none w-full bg-white duration-300 flex items-center justify-center"></div>
               </button>
