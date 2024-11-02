@@ -1,10 +1,13 @@
 "use client";
 
+import HeroSection from "@/components/banner/Banner";
+
 export default function Home() {
   return (
     <>
-    <div className="min-h-screen"></div>
-    <div className="min-h-screen"></div>
+      <div className=" container flex flex-col">
+        <HeroSection />
+      </div>
     </>
   );
 }

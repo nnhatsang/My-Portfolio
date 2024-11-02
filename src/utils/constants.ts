@@ -50,3 +50,8 @@ export const SKILLS = {
   userInterface: ["figma", "sketch", "illustrator", "photoshop"],
   other: ["git", "webpack", "gulp", "lightroom", "aftereffects"],
 };
+
+export const TYPED_STRINGS = [
+  "I develop frontend",
+  "I design dynamic user experience",
+];

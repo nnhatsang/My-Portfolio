@@ -12,7 +12,7 @@ const Header: React.FC = () => {
   const Menu = (): React.ReactNode => {
     return (
       <section
-        className="menu fixed top-0 left-0 w-full h-screen z-50 overflow-hidden invisible pointer-events-none flex items-center justify-center"
+        className="menu fixed top-0 left-0 w-full h-screen overflow-hidden invisible pointer-events-none flex items-center justify-center"
         style={{ visibility: "hidden" }}
       >
         <div className="flex-none overflow-hidden flex items-center justify-center">
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
   };
   return (
     <>
-      <header className="sticky top-0 py-8  px-10 max-lg:px-5 max-sm:px-5 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:shadow-secondary">
+      <header className="sticky top-0 py-8 z-20  px-10 max-lg:px-5 max-sm:px-5 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:shadow-secondary">
         <div className="flex justify-between section-container">
           <a href="#home" className="link z-[999]">
             <Image src={logo} alt="logo" priority width={40} height={40} />
@@ -55,8 +55,8 @@ const Header: React.FC = () => {
             </div>
             <nav className={`outer-menu ${menuVisible ? "menu-visible" : ""}`}>
               <button
-                className="hamburger w-6 h-6 flex items-center justify-center link relative z-10"
-                onClick={() => setmenuVisible(!menuVisible)}
+                className="hamburger w-6 h-6 flex items-center justify-center link relative"
+                onClick={setmenuVisible.bind(null, !menuVisible)}
               >
                 <div className="relative flex-none w-full bg-white duration-300 flex items-center justify-center"></div>
               </button>
