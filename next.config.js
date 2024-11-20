@@ -11,7 +11,7 @@ const nextConfig = {
     ],
     formats: ["image/avif", "image/webp"],
     unoptimized: true,
-    dangerouslyAllowSVG: true, // Cho phép tải hình ảnh SVG
+    dangerouslyAllowSVG: true, 
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 };
