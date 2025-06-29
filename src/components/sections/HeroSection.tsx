@@ -15,7 +15,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-slate-900 px-6">
+    <section className="min-h-screen flex items-center justify-center bg-[#00283C] px-6">
       <div className="max-w-5xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,16 +29,17 @@ const HeroSection = () => {
           <h2 className="text-4xl font-bold text-slate-400 mb-8">
             Tôi xây dựng các ứng dụng web.
           </h2>
-          
+
           <motion.p
             className="mt-4 max-w-2xl mx-auto text-slate-300 text-lg leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Tôi là một Fullstack Developer với 1.5 năm kinh nghiệm, tập trung vào hệ sinh thái NestJS và Next.js. 
-            Tôi đam mê việc xây dựng các sản phẩm có kiến trúc sạch, hiệu năng cao và luôn sẵn sàng học hỏi, 
-            đóng góp trong môi trường làm việc năng động.
+            Tôi là một Fullstack Developer với 1.5 năm kinh nghiệm, tập trung
+            vào hệ sinh thái NestJS và Next.js. Tôi đam mê việc xây dựng các sản
+            phẩm có kiến trúc sạch, hiệu năng cao và luôn sẵn sàng học hỏi, đóng
+            góp trong môi trường làm việc năng động.
           </motion.p>
 
           <motion.div
@@ -53,7 +54,7 @@ const HeroSection = () => {
             >
               Xem dự án của tôi
             </button>
-            
+
             <div className="flex items-center gap-4 ml-4">
               <a
                 href="https://github.com/nnhatsang"

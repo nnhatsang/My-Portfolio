@@ -12,33 +12,33 @@ const EducationSection = () => {
       title: "Cử nhân Khoa học Máy tính",
       institution: "Đại học Mở TP.HCM",
       period: "2019 - 2023",
-      icon: GraduationCap
+      icon: GraduationCap,
     },
     {
       type: "certification",
       title: "Chứng chỉ Lập trình viên Fullstack",
       institution: "CyberSoft Academy",
       period: "2023",
-      icon: Award
+      icon: Award,
     },
     {
       type: "certification",
       title: "Chứng chỉ Professional NodeJs Developer",
       institution: "CyberSoft Academy",
       period: "2023 - 2024",
-      icon: Award
+      icon: Award,
     },
     {
       type: "certification",
       title: "Chứng chỉ Professional Front-End Web Development",
       institution: "CyberSoft Academy",
       period: "2023 - 2024",
-      icon: Award
-    }
+      icon: Award,
+    },
   ];
 
   return (
-    <section id="education" className="py-24 bg-slate-900 px-6">
+    <section id="education" className="py-24 bg-[#00283C] px-6">
       <div className="max-w-5xl mx-auto">
         <motion.h2
           className="text-3xl font-bold text-slate-100 mb-12 text-center"
@@ -64,7 +64,7 @@ const EducationSection = () => {
                   <div className="bg-teal-300/10 p-3 rounded-full">
                     <IconComponent size={24} className="text-teal-300" />
                   </div>
-                  
+
                   <div className="flex-1">
                     <h3 className="font-semibold text-slate-100 mb-2">
                       {item.title}

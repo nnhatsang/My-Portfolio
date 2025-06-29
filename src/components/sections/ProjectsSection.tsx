@@ -12,57 +12,69 @@ const ProjectsSection = () => {
       id: "chat-message",
       title: "Chat Message",
       subtitle: "Dự án nổi bật",
-      description: "Một ứng dụng nhắn tin web hiệu năng cao, hỗ trợ cả chat 1-1 và chat nhóm. Mục tiêu là mang lại trải nghiệm giao tiếp liền mạch, tức thì và giàu tính năng.",
+      description:
+        "Một ứng dụng nhắn tin web hiệu năng cao, hỗ trợ cả chat 1-1 và chat nhóm. Mục tiêu là mang lại trải nghiệm giao tiếp liền mạch, tức thì và giàu tính năng.",
       role: "Trong dự án này, tôi chịu trách nhiệm chính trong việc xây dựng giao diện người dùng (UI) và quản lý trạng thái (state management) phía client, cũng như tích hợp với real-time server qua Socket.IO.",
-      technologies: ["Next.js", "React Query", "Zustand", "Tailwind CSS", "Socket.IO"],
+      technologies: [
+        "Next.js",
+        "React Query",
+        "Zustand",
+        "Tailwind CSS",
+        "Socket.IO",
+      ],
       github: "https://github.com/nnhatsang/chat-message",
       external: "",
       image: "/projects/chat-message.png",
-      reverse: false
+      reverse: false,
     },
     {
       id: "livestream",
       title: "Livestream Platform",
       subtitle: "Dự án nổi bật",
-      description: "Nền tảng livestream all-in-one cho doanh nghiệp tổ chức sự kiện, tương tác với khán giả và thúc đẩy doanh số thông qua các tính năng như chat real-time, in-stream và analytics chi tiết.",
+      description:
+        "Nền tảng livestream all-in-one cho doanh nghiệp tổ chức sự kiện, tương tác với khán giả và thúc đẩy doanh số thông qua các tính năng như chat real-time, in-stream và analytics chi tiết.",
       role: "Tôi phát triển dynamic rendering engine cho phép UI (logos, màu thương hiệu, layouts) được tùy chỉnh hoàn toàn từ backend admin panel, phù hợp với corporate identity của từng client.",
       technologies: ["React Query", "Next.js", "Shadcn/ui", "WebSockets"],
       github: "https://github.com/nnhatsang/livestream",
       external: "",
       image: "/projects/livestream.png",
-      reverse: true
-    }
+      reverse: true,
+    },
   ];
 
   const otherProjects = [
     {
       title: "Food Delivery Telegram Mini App",
-      description: "Hệ thống đặt đồ ăn tiện lợi hoạt động ngay trên nền tảng Telegram.",
+      description:
+        "Hệ thống đặt đồ ăn tiện lợi hoạt động ngay trên nền tảng Telegram.",
       technologies: ["React Query", "Next.js", "Shadcn/ui"],
-      github: "https://github.com/nnhatsang/food-delivery-telegram"
+      github: "https://github.com/nnhatsang/food-delivery-telegram",
     },
     {
-      title: "Programme Learning Outcomes", 
-      description: "Hệ thống quản lý và đánh giá kết quả học tập của chương trình đại học.",
+      title: "Programme Learning Outcomes",
+      description:
+        "Hệ thống quản lý và đánh giá kết quả học tập của chương trình đại học.",
       technologies: ["NestJS", "TypeORM", "PostgreSQL"],
-      github: "https://github.com/nnhatsang/programme-learning"
+      github: "https://github.com/nnhatsang/programme-learning",
     },
     {
       title: "Storage Service Zalo MiniApp",
-      description: "Mini-app Zalo nâng cao trải nghiệm truy cập dịch vụ công, cho phép đặt lịch hẹn và tham gia khảo sát.",
+      description:
+        "Mini-app Zalo nâng cao trải nghiệm truy cập dịch vụ công, cho phép đặt lịch hẹn và tham gia khảo sát.",
       technologies: ["NestJS", "Next.js", "Ant Design"],
-      github: "https://github.com/nnhatsang/storage-service-zalo"
+      github: "https://github.com/nnhatsang/storage-service-zalo",
     },
     {
       title: "IDC - Executive Direction",
-      description: "Hệ thống phân tích và mô tả quy trình hoạt động của cơ quan, thủ tục giao nhiệm vụ cho đơn vị.",
+      description:
+        "Hệ thống phân tích và mô tả quy trình hoạt động của cơ quan, thủ tục giao nhiệm vụ cho đơn vị.",
       technologies: ["NestJS", "TypeORM", "React Query"],
-      github: "https://github.com/nnhatsang/idc-executive"
-    }
+      github: "https://github.com/nnhatsang/idc-executive",
+    },
   ];
 
   return (
-    <section id="projects" className="py-24 bg-slate-900 px-6">
+    <section id="projects" className="py-24 bg-[#00283C] px-6">
       <div className="max-w-5xl mx-auto">
         <motion.h2
           className="text-3xl font-bold text-slate-100 mb-16 text-center"
@@ -95,10 +107,16 @@ const ProjectsSection = () => {
               </div>
 
               {/* Project Info */}
-              <div className={`${project.reverse ? "lg:col-start-1 lg:row-start-1" : ""}`}>
+              <div
+                className={`${
+                  project.reverse ? "lg:col-start-1 lg:row-start-1" : ""
+                }`}
+              >
                 <p className="text-teal-300 text-sm mb-2">{project.subtitle}</p>
-                <h3 className="text-2xl font-bold text-slate-100 mb-4">{project.title}</h3>
-                
+                <h3 className="text-2xl font-bold text-slate-100 mb-4">
+                  {project.title}
+                </h3>
+
                 <div className="bg-slate-700 p-4 rounded shadow-md mb-4">
                   <p className="text-slate-300 mb-4">{project.description}</p>
                   <p className="text-slate-400 text-sm italic">
@@ -151,7 +169,7 @@ const ProjectsSection = () => {
           <h3 className="text-2xl font-bold text-slate-100 text-center mb-12">
             Các dự án khác
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {otherProjects.map((project, index) => (
               <motion.div
@@ -172,18 +190,17 @@ const ProjectsSection = () => {
                     <Github size={20} />
                   </a>
                 </div>
-                
-                <h4 className="font-bold text-slate-100 mb-3">{project.title}</h4>
+
+                <h4 className="font-bold text-slate-100 mb-3">
+                  {project.title}
+                </h4>
                 <p className="text-sm text-slate-300 mb-4 leading-relaxed">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs text-slate-400"
-                    >
+                    <span key={tech} className="text-xs text-slate-400">
                       {tech}
                     </span>
                   ))}

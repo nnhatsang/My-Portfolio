@@ -36,14 +36,14 @@ const Footer = () => {
         ></Button>
       </div>
       <h2 className="text-center text-slate-400 text-sm sm:text-base">
-        Thiết kế và xây dựng bởi Nguyễn Nhật Sang. Lấy cảm hứng từ Brittany Chiang.
+        {/* Thiết kế và xây dựng bởi Nguyễn Nhật Sang. */}
       </h2>
     </>
   );
 
   return (
     <footer
-      className="w-full z-0 relative select-none bg-cover flex flex-col items-stretch"
+      className="w-full z-0 relative select-none bg-[#00283C] flex flex-col items-stretch"
       id={footerRef}
     >
       <div className="np-footer-graphic-container">

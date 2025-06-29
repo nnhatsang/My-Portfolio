@@ -7,7 +7,7 @@ import { cookies } from "next/headers";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import Footer from "@/components/footer/Footer";
 
-// const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
@@ -26,15 +26,13 @@ export default async function RootLayout({
   
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} >
+      <body
+        suppressHydrationWarning={true}
+        className={`${inter.className} bg-[#00283C] text-white selection:bg-cyan-300 selection:text-cyan-900`}
+      >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
-
-          {children}
-          {/* <SidebarProvider defaultOpen={defaultOpen}>
-            <SidebarTrigger />
-
-          </SidebarProvider> */}
+          <main>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
