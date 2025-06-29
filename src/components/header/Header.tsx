@@ -46,7 +46,7 @@ const Header: React.FC = () => {
     <>
       <header className="sticky top-0 py-8 z-20  px-10 max-lg:px-5 max-sm:px-5 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:shadow-secondary">
         <div className="flex justify-between section-container">
-          <a href="#home" className="link z-[999]">
+          <a href="#" className="link z-[999]">
             <Image src={logo} alt="logo" priority width={40} height={40} />
           </a>
           <div className="flex items-center gap-6 max-lg:flex-2">

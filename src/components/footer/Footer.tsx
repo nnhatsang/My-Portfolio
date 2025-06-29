@@ -35,8 +35,8 @@ const Footer = () => {
           otherProps={{ target: "_blank", rel: "noreferrer" }}
         ></Button>
       </div>
-      <h2 className="text-center text-white text-sm sm:text-base">
-        Designed by Nnhatsang
+      <h2 className="text-center text-slate-400 text-sm sm:text-base">
+        Thiết kế và xây dựng bởi Nguyễn Nhật Sang. Lấy cảm hứng từ Brittany Chiang.
       </h2>
     </>
   );

@@ -1,22 +1,22 @@
 export const MENULINKS = [
   {
-    name: "Home",
+    name: "Trang chủ",
     ref: "home",
   },
   {
-    name: "Works",
-    ref: "works",
+    name: "Về tôi",
+    ref: "about",
   },
   {
-    name: "Skills",
-    ref: "skills",
+    name: "Kinh nghiệm",
+    ref: "experience",
   },
   {
-    name: "Timeline",
-    ref: "timeline",
+    name: "Dự án",
+    ref: "projects",
   },
   {
-    name: "Contact",
+    name: "Liên hệ",
     ref: "contact",
   },
 ];
